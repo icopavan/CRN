@@ -1,0 +1,19 @@
+The main file you want to run to produce the results if you have the locations is maxthrough_deter
+
+-In maxthrough_directional_deter change the parameters in the first few lines (ex: M,N_f,pwr_budget etc.)
+-To change parameters of GA change variables in createinput.m file
+-Provide the location of the mat file where the su, pu locations are stored
+-pu location follow the following format:
+	-First M tuples are PU transmitters' coordinates
+	-Next M tuples are PU recievers' coordinates
+-su location follow the following format:
+	-First N tuples are sU transmitters' coordinates
+	-Next N tuples are sU recievers' coordinates
+
+-Results:
+	- popnum gives the total number of rank 1 solution
+	- Use fval(1,1:popnum)./B to get the normalized throughput
+	- Use fval(2,1:popnum) to get the number of active users
+	- make plots
+
+In order to generate new SU, PU locations which will give a pareto front rather than a single point on the front use maxthrough_generate
